@@ -1,0 +1,89 @@
+:root {
+  --background: hsl(220, 20%, 97%);
+  --foreground: hsl(220, 25%, 12%);
+
+  --card: hsl(0, 0%, 100%);
+  --card-foreground: hsl(220, 25%, 12%);
+
+  --popover: hsl(0, 0%, 100%);
+  --popover-foreground: hsl(220, 25%, 12%);
+
+  --primary: hsl(220, 60%, 45%);
+  --primary-foreground: hsl(0, 0%, 100%);
+
+  --secondary: hsl(220, 15%, 90%);
+  --secondary-foreground: hsl(220, 25%, 20%);
+
+  --muted: hsl(220, 15%, 93%);
+  --muted-foreground: hsl(220, 10%, 45%);
+
+  --accent: hsl(38, 92%, 50%);
+  --accent-foreground: hsl(38, 95%, 10%);
+
+  --destructive: hsl(0, 84%, 60%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+
+  --border: hsl(220, 18%, 88%);
+  --input: hsl(220, 18%, 88%);
+  --ring: hsl(220, 60%, 45%);
+
+  --radius: 0.75rem;
+
+  --steel: hsl(220, 25%, 30%);
+  --steel-light: hsl(220, 15%, 60%);
+  --result-bg: hsl(220, 60%, 45%);
+  --result-fg: hsl(0, 0%, 100%);
+}
+
+.dark {
+  --background: hsl(220, 25%, 8%);
+  --foreground: hsl(220, 10%, 92%);
+
+  --card: hsl(220, 25%, 12%);
+  --card-foreground: hsl(220, 10%, 92%);
+
+  --popover: hsl(220, 25%, 12%);
+  --popover-foreground: hsl(220, 10%, 92%);
+
+  --primary: hsl(220, 60%, 55%);
+  --primary-foreground: hsl(0, 0%, 100%);
+
+  --secondary: hsl(220, 20%, 18%);
+  --secondary-foreground: hsl(220, 10%, 85%);
+
+  --muted: hsl(220, 20%, 16%);
+  --muted-foreground: hsl(220, 10%, 55%);
+
+  --accent: hsl(38, 92%, 55%);
+  --accent-foreground: hsl(38, 95%, 10%);
+
+  --destructive: hsl(0, 62%, 30%);
+  --destructive-foreground: hsl(0, 0%, 100%);
+
+  --border: hsl(220, 20%, 20%);
+  --input: hsl(220, 20%, 20%);
+  --ring: hsl(220, 60%, 55%);
+
+  --steel: hsl(220, 15%, 55%);
+  --steel-light: hsl(220, 10%, 40%);
+  --result-bg: hsl(220, 60%, 55%);
+  --result-fg: hsl(0, 0%, 100%);
+}
+
+$font-family-base: 'Inter', system-ui, sans-serif;
+$font-family-mono: 'JetBrains Mono', monospace;
+
+$radius-sm: calc(var(--radius) - 4px);
+$radius-md: calc(var(--radius) - 2px);
+$radius-lg: var(--radius);
+
+$spacing-xs: 0.25rem;
+$spacing-sm: 0.5rem;
+$spacing-md: 1rem;
+$spacing-lg: 1.5rem;
+$spacing-xl: 2rem;
+
+$breakpoint-sm: 640px;
+$breakpoint-md: 768px;
+$breakpoint-lg: 1024px;
+$breakpoint-xl: 1280px;

@@ -1,0 +1,177 @@
+@use '@/shared/styles/variables' as v;
+@use '@/shared/styles/mixins' as m;
+
+.calculator {
+  min-height: 100vh;
+  background-color: var(--background);
+}
+
+.header {
+  border-bottom: 1px solid var(--border);
+  background-color: var(--card);
+}
+
+.headerContainer {
+  @include m.container;
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.headerIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: v.$radius-lg;
+  background-color: var(--primary);
+  @include m.flex-center;
+}
+
+.headerIconText {
+  color: var(--primary-foreground);
+  font-weight: 700;
+  font-size: 1.125rem;
+  font-family: v.$font-family-mono;
+}
+
+.headerTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--foreground);
+  letter-spacing: -0.025em;
+  margin: 0;
+}
+
+.headerSubtitle {
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+  margin: 0;
+}
+
+.main {
+  @include m.container;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.card {
+  @include m.card;
+}
+
+.cardSection {
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.cardSectionLast {
+  border-bottom: none;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+}
+
+.pairedFieldsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.dimensionsGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+
+  @include m.responsive(md) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.inlineInputs {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.actionsPrimary {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.actionsCalculate {
+  flex: 1;
+  min-width: 10rem;
+}
+
+.actionsBottom {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.modalContent {
+  max-width: 42rem;
+  width: 100%;
+}
+
+.saveForm {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.saveLabel {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--foreground);
+}
+
+.saveInput,
+.saveTextarea {
+  width: 100%;
+  border: 1px solid var(--input);
+  border-radius: v.$radius-md;
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  background-color: var(--background);
+  color: var(--foreground);
+}
+
+.saveInput:focus-visible,
+.saveTextarea:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.inputs {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.diagram {
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.diagramContainer {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+}
+
+.infoText {
+  margin-top: 1.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted-foreground);
+}

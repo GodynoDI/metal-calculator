@@ -1,0 +1,115 @@
+@use '@/shared/styles/variables' as v;
+@use '@/shared/styles/mixins' as m;
+
+.trigger {
+  @include m.input-base;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background-color: var(--background);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+  & > span {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+.triggerIcon {
+  width: 1rem;
+  height: 1rem;
+  opacity: 0.5;
+  flex: 0 0 auto;
+}
+
+.scrollButton {
+  background-color: var(--popover);
+  color: var(--muted-foreground);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0;
+}
+
+.scrollIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.content {
+  background-color: var(--popover);
+  color: var(--popover-foreground);
+  border: 1px solid var(--border);
+  border-radius: v.$radius-md;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.viewport {
+  padding: 0.25rem;
+}
+
+.viewportPopper {
+  width: 100%;
+  min-width: var(--radix-select-trigger-width);
+  max-width: min(var(--radix-select-content-available-width), calc(100vw - 16px));
+  max-height: min(var(--radix-select-content-available-height), calc(100dvh - 16px));
+}
+
+.label {
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.item {
+  border-radius: v.$radius-sm;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+  cursor: pointer;
+  user-select: none;
+  position: relative;
+  display: flex;
+  width: 100%;
+  align-items: center;
+  outline: none;
+
+  &[data-disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
+
+  &[data-highlighted] {
+    background-color: var(--accent);
+    color: var(--accent-foreground);
+    outline: none;
+  }
+}
+
+.itemIndicatorWrap {
+  position: absolute;
+  left: 0.5rem;
+  display: flex;
+  width: 0.875rem;
+  height: 0.875rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.itemIndicatorIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.itemText {
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.separator {
+  background-color: var(--border);
+}

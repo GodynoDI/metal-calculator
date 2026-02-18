@@ -1,0 +1,13 @@
+@use '@/shared/styles/mixins' as m;
+
+.group {
+  display: block;
+}
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--muted-foreground);
+  margin-bottom: 0.375rem;
+}

@@ -1,0 +1,60 @@
+@use '@/shared/styles/mixins' as m;
+
+.label {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--foreground);
+  margin-bottom: 0.75rem;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+
+  @include m.responsive(sm) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.productMobileLabel {
+  display: block;
+  margin-top: 0.5rem;
+  text-align: center;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--foreground);
+
+  @include m.responsive(sm) {
+    display: none;
+  }
+}
+
+.button {
+  @include m.button-base;
+  background-color: var(--secondary);
+  color: var(--secondary-foreground);
+
+  &:hover {
+    background-color: var(--muted);
+  }
+}
+
+.buttonActive {
+  background-color: var(--primary);
+  color: var(--primary-foreground);
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.buttonIcon {
+  font-size: 1rem;
+}
+
+.buttonName {
+  display: none;
+
+  @include m.responsive(sm) {
+    display: inline;
+  }
+}

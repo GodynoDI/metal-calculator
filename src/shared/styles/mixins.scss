@@ -1,0 +1,81 @@
+@use './variables';
+
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin container {
+  max-width: 56rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+@mixin button-base {
+  padding: 0.625rem 0.75rem;
+  border-radius: variables.$radius-lg;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all 0.15s ease;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+@mixin input-base {
+  width: 100%;
+  border-radius: variables.$radius-lg;
+  border: 1px solid var(--input);
+  background-color: var(--background);
+  padding: 0.625rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--foreground);
+  font-family: variables.$font-family-mono;
+
+  &:focus {
+    outline: none;
+    ring: 2px;
+    ring-color: var(--ring);
+  }
+}
+
+@mixin card {
+  background-color: var(--card);
+  border-radius: calc(variables.$radius-lg + 2px);
+  border: 1px solid var(--border);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+@mixin responsive($breakpoint) {
+  @if $breakpoint == sm {
+    @media (min-width: variables.$breakpoint-sm) {
+      @content;
+    }
+  } @else if $breakpoint == md {
+    @media (min-width: variables.$breakpoint-md) {
+      @content;
+    }
+  } @else if $breakpoint == lg {
+    @media (min-width: variables.$breakpoint-lg) {
+      @content;
+    }
+  } @else if $breakpoint == xl {
+    @media (min-width: variables.$breakpoint-xl) {
+      @content;
+    }
+  }
+}

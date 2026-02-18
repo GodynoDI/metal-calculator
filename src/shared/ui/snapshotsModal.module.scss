@@ -1,0 +1,77 @@
+@use '@/shared/styles/mixins' as m;
+@use '@/shared/styles/variables' as v;
+
+.modalContent {
+  max-width: 42rem;
+}
+
+.modalList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  overflow: auto;
+  max-height: 50vh;
+  padding-right: 0.25rem;
+}
+
+.modalEmpty {
+  padding: 0.75rem;
+  color: var(--muted-foreground);
+  font-size: 0.875rem;
+}
+
+.modalRowButton {
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: v.$radius-md;
+  padding: 0.75rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  cursor: pointer;
+  transition: background-color 120ms ease;
+}
+
+.modalRowButton:hover {
+  background-color: var(--muted);
+}
+
+.modalRowButton:focus-visible {
+  outline: 2px solid var(--ring);
+  outline-offset: 2px;
+}
+
+.modalRowMain {
+  min-width: 0;
+}
+
+.modalRowTitle {
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--foreground);
+}
+
+.modalRowMeta {
+  margin-top: 0.25rem;
+  font-size: 0.8125rem;
+  color: var(--muted-foreground);
+  word-break: break-word;
+}
+
+.modalRowComment {
+  margin-top: 0.5rem;
+  font-size: 0.8125rem;
+  color: var(--foreground);
+  white-space: pre-wrap;
+  opacity: 0.9;
+}
+
+.modalRowActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}

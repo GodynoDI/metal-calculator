@@ -1,0 +1,41 @@
+@use '@/shared/styles/variables' as v;
+
+.root {
+  width: 100%;
+  margin-top: 1rem;
+  border-radius: calc(v.$radius-lg + 4px);
+  background-color: var(--result-bg);
+  padding: 1.25rem;
+  text-align: center;
+}
+
+.label {
+  font-size: 0.875rem;
+  color: rgba(var(--result-fg), 0.7);
+  margin-bottom: 0.25rem;
+}
+
+.value {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.number {
+  font-size: 2.25rem;
+  font-weight: 700;
+  font-family: v.$font-family-mono;
+  color: var(--result-fg);
+}
+
+.unit {
+  font-size: 1.125rem;
+  color: rgba(var(--result-fg), 0.8);
+}
+
+.grams {
+  font-size: 0.75rem;
+  color: rgba(var(--result-fg), 0.5);
+  margin-top: 0.25rem;
+}

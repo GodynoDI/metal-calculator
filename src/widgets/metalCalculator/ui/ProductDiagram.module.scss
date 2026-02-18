@@ -1,0 +1,51 @@
+.root {
+  width: 100%;
+  max-width: 200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.root svg {
+  width: 100%;
+  height: auto;
+}
+
+.patternLine {
+  stroke: var(--steel-light);
+  stroke-width: 0.8;
+  opacity: 0.4;
+}
+
+.strokeSteel {
+  stroke: var(--steel);
+}
+
+.strokeSteelLight {
+  stroke: var(--steel-light);
+}
+
+.strokePrimary {
+  stroke: var(--primary);
+}
+
+.strokeAccent {
+  stroke: var(--accent);
+}
+
+.diagramLabel {
+  font-family: var(--font-family-mono, 'JetBrains Mono', monospace);
+  font-size: 11px;
+  text-anchor: middle;
+}
+
+.diagramLabelSmall {
+  font-size: 10px;
+}
+
+.diagramLabelPrimary {
+  fill: var(--primary);
+}
+
+.diagramLabelAccent {
+  fill: var(--accent);
+}
